@@ -1,0 +1,42 @@
+body {
+  background-color: gainsboro;
+  /* Use a system font, if none are available use an available sans-sarif */
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 325px;
+}
+
+.sqr {
+  width: 30%;
+  aspect-ratio: 1/1;
+  border: 3px solid black;
+  font-size: 64px;
+  text-align: center;
+}
+
+/* 
+In the body rule we are using display: flex; and flex-wrap: wrap;. 
+These declarations are related to flexbox. 
+All you need to know about them for now is that they are 
+helping us create the layout for our board - you don’t need to touch these.
+In the .sqr rule there is a width: 30%; declaration. 
+This sets the width of the content of each element with the sqr class to be
+ 30% of the width of it’s parent element.
+  In this case all the elements with the .sqr class have a single parent 
+  - the <section> element with the board class. 
+  We set the width of that element to 325px above. 
+  This means that the content of each element with the sqr class
+   will have a final width of about 98px.
+
+If you change the width declaration in the .board rule,
+ you will notice that the width of the elements with the sqr class also changes.
+
+Their height will change as well,
+ because there is a aspect-ratio: 1/1; declaration in the .sqr rule. 
+ This makes the elements with the sqr class square shaped
+  - the element will be as tall as it is wide (giving it an aspect ratio of 1:1). */
